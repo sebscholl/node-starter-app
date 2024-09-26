@@ -1,20 +1,19 @@
 import { faker } from '@faker-js/faker';
 
-export const { User } = App.db.models;
+import Factory from '@test/factories/factory';
 
-const attributes = (overrides) => ({
-  phoneNumber: faker.phone.number({ style: 'national' }),
-  countryCode: faker.location.countryCode('numeric'),
-  ...overrides,
-});
-
-export default {
-  async build(overrides = {}) {
-    return User.create(attributes(overrides));
-
-  },
-
-  async create(overrides = {}) {
-    return User.create(attributes(overrides));
+export default new Factory({
+  model: App.db.models.User,
+  attributes: () => ({
+    phoneNumber: faker.phone.number({ style: 'national' }),
+    countryCode: faker.location.countryCode('numeric')
+  }),
+  traits: {
+    withUsNumber: () => ({
+      countryCode: '1'
+    }),
+    withUkNumber: () => ({
+      countryCode: '44'
+    })
   }
-};
+});

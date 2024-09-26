@@ -5,10 +5,10 @@ import UserFactory from '@test/factories/user.js'
 const { fetcher } = global.App.test;
 
 describe('users', () => {
-  let user;
+  let users;
 
   beforeEach(async () => {
-    user = await UserFactory.create();
+    users = await UserFactory.createList(3);
   })
 
   describe('GET /users', () => {
@@ -23,7 +23,7 @@ describe('users', () => {
     })
 
     it('returns all users', async () => {
-      expect(response.data).toBeArray();
+      expect(response.data.length).toBe(3);
     })
   })
 })

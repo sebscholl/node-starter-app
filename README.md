@@ -1,4 +1,8 @@
-# core-node
+# Node App Starter
+
+- Bun
+- Hono
+- Sequelize
 
 
 # DB Creation

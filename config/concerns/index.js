@@ -1,7 +1,6 @@
-import dbConcern from "@config/concerns/db";
-import viewConcern from "@config/concerns/views";
-import routerConcern from "@config/concerns/router";
-
+import dbConcern from "@config/concerns/_db";
+import viewConcern from "@config/concerns/_views";
+import routerConcern from "@config/concerns/_router";
 
 global.App = {};
 
