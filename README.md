@@ -1,9 +1,8 @@
-# Node App Starter
+# Node App Starter TODO
 
 - Bun
 - Hono
 - Sequelize
-
 
 # DB Creation
 

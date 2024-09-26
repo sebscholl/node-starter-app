@@ -1,8 +1,8 @@
 {
-  "name": "core-node",
+  "name": "node-starter-app",
   "type": "module",
   "version": "1.0.0",
-  "description": "ZAR Core services server application written in node.",
+  "description": "A node based MVC starter app.",
   "directories": {
     "test": "test"
   },
@@ -15,7 +15,7 @@
     "model:generate": "sequelize-cli model:generate ",
     "migration:generate": "sequelize-cli migration:generate "
   },
-  "author": "GOLDEN AGE DEV LAB LTD. PTE.",
+  "author": "Sebastian Scholl",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
