@@ -22,7 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: DataTypes.UUIDV4,
     },
     phoneNumber: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      validate: {
+        len: [5, 12],
+      }
     },
     countryCode: {
       type: DataTypes.STRING

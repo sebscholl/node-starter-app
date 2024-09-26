@@ -10,6 +10,4 @@
  */
 
 import '@config/environment.js';
-import { App } from '@config/application.js';
-
-export default App;
+import '@config/application.js';

@@ -1,15 +1,14 @@
 import { serve } from 'bun'
 
-import router, { fetch } from "@config/router";
-
-import db from "@db/";
+import { db, views, router } from "@config/concerns";
 
 const port = process.env.PORT || 3000;
 
-export const App = {
+global.App = {
   router,
+  views,
   db
 };
 
 /* Start the server. */
-serve({ port, fetch });
+serve({ port, fetch: router.fetch });

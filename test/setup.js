@@ -1,9 +1,10 @@
 import { exec } from 'child_process';
-import { beforeEach } from 'bun:test';
+import { beforeEach, expect } from 'bun:test';
 
 import '@config/environment.js';
-import { App } from '@config/application.js';
+import '@config/application.js';
 
+import '@test/support';
 
 await new Promise((resolve, reject) => {
   const migrate = exec('sequelize db:migrate', { env: process.env },

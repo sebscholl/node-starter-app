@@ -1,7 +1,5 @@
 import { faker } from '@faker-js/faker';
 
-import { App } from '@config/application.js'
-
 export const { User } = App.db.models;
 
 const attributes = (overrides) => ({
