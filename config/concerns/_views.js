@@ -14,5 +14,7 @@ export default function (appInstance) {
 
   appInstance.views = views;
 
+  console.log(views)
+
   return views;
 };
